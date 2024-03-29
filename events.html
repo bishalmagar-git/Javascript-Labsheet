@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+        <div class="container">
+            <button onmouseover="console.log('Fuck It')">Click Me</button>
+        </div>
+        <div class="my">
+            <button class="myBtn">Click Me</button>
+        </div>
+</body>
+    <script>
+        let a = document.getElementsByClassName("container")[0];
+        a.onclick = () =>{
+            let b = document.getElementsByClassName("container")[0];
+        b.innerHTML="Namaste people";
+        }
+        document.getElementById("myBtn").addEventListener("click", displayDate);
+        
+    </script>
+        
+</html>
