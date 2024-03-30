@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+   <script>
+    //document.cookie = "Username = Bishal; max-age = 30*24*60*60; path=/";  
+    document.cookie = "Username = Bishal; expires = Sat, 30 Mar 2025 15:25:00 UTC; path=/"; //Creating a cookie
+
+    document.cookie = "lastName = Magar; expires = Sat, 30 Mar 2025 15:25:00 UTC; path=/";
+    console.log(document.cookie);
+    let myCookie = document.cookie;  //Reading a Cookie
+
+    document.cookie = "Username = Arjun; expires = Sat, 30 Mar 2024 15:25:00 UTC; path=/"; //Changing  a cookie / OverWriting previouscookie
+
+    document.cookie = "Username = Arjun; expires = Sat, 30 Mar 2023 15:25:00 UTC; path=/";  //Deleting a cookie
+
+    document.write(myCookie,);
+   </script>
+</html>
