@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async and Await projects</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script> 
+    const sayDate = function(){
+        console.log("Bishal", Date.now());
+    }
+
+    document.querySelector("#start").addEventListener('click', function(){
+        const intervalId = setInterval(sayDate, 3000);
+        // Store intervalId if you want to stop it later
+        this.dataset.intervalId = intervalId;
+    });
+
+    document.querySelector("#stop").addEventListener('click', function(){
+        const intervalId = parseInt(this.dataset.intervalId);
+        clearInterval(intervalId);
+           console.log("Stopped");
+    });
+</script>
+</html>
