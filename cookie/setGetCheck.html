@@ -9,15 +9,42 @@
     
 </body>
 <script>
-  setCookie("email","bishals10magar@gmail.com",365);
-  console.log(document.cookie);
+  setCookie("email", "bishal@gmail.com", 30);
+setCookie("firstName", "Bishal", 30);
 
-    function setCookie(name, value, daysToLive){
-      const date = new Date();
-      date.setTime(date.getTime() + (daysToLive * 24*60*60*1000));
+//deleteCookie("email");
+//deleteCookie("firstName");
 
-      let expires = "expires=" + daysToLive.toUTCString();
-      document.cookie = `${name} = ${value}; ${expires} + path = /; `
+console.log(document.cookie);
+
+function setCookie(name, value, exdays) {
+    const date = new Date();
+    const newTime = date.getTime() + (exdays * 24 * 60 * 60 * 1000);
+    date.setTime(newTime);
+
+    let expires = "expires=" + date.toUTCString();
+    let cookieString = `${name}=${value}; ${expires}`;
+   // if (sameSite) {
+     //   cookieString += `; SameSite=${sameSite}`;}
+    //document.cookie = cookieString;
+}
+
+//function deleteCookie(name) {
+   // document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;}
+
+function checkCookie(){
+  let userName = getCookie("username");
+  if(userName!=""){
+    alert("Welcome again"+ userName);
+  }else{
+    username = prompt("Enter your name:","");
+    if(userName!=""&& userName!=NULL){
+      setCookie("username",userName,365);
     }
+  }
+}
+
+
+
 </script>
 </html>
