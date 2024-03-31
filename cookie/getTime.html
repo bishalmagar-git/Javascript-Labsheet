@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Imagine you have a clock, and you want to change the time it shows. 
+    //setTime is like turning the hands of the clock to the desired time.
+    
+    const currentDate = new Date(); // Current time
+    const threeHoursLater = currentDate.getTime() + (3 * 60 * 60 * 1000); // Adding 3 hours in milliseconds
+    currentDate.setTime(threeHoursLater); // Setting the new time
+
+
+//Imagine you have a clock, and you want to know what time it shows. 
+//GetTime is like looking at the clock and reading the time it displays.
+
+const curDate = new Date(); // Current time
+const millisecondsSince1970 = curDate.getTime(); // Getting the time in milliseconds
+
+</script>
+</html>
